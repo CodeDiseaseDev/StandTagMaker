@@ -22,6 +22,10 @@ namespace Stand_Tag_Theme_Maker
             tagThemeChanger1.OnChanged = OnThemeChanged;
             StaticOnThemeChanged = OnThemeChanged;
 
+            tagThemeChanger1.theme = ThemePresets[1];
+            tagThemeChanger1.UpdateValues();
+            OnThemeChanged();
+
             foreach (TagTheme preset in ThemePresets)
             {
                 var btn = new BlinkButton
@@ -85,7 +89,7 @@ namespace Stand_Tag_Theme_Maker
             },
             new TagTheme()
             {
-                Background = ColorFromHex("#121212"),
+                Background = ColorFromHex("#000000"),
                 Foreground = ColorFromHex("#FFFFFF"),
                 CornerRadius = 4,
                 Padding = new Padding(4, 3, 0, 0),
@@ -110,6 +114,31 @@ namespace Stand_Tag_Theme_Maker
         }
 
         public static string[] tagStrings =
+        {
+            "INTERIOR",
+            "LIKELY MODDER",
+            "YOU",
+            "MODDER / ADMIN",
+            "MODDER",
+            "NEXT HOST",
+            "OTR",
+            "RC",
+            "ADMIN",
+            "CREW",
+            "DEAD",
+            "FRIEND",
+            "GOD",
+            "HOST",
+            "SCRIPT HOST",
+            "SPECTATING",
+            "TIMEOUT",
+            "TYPING",
+            "VEHICLE GOD",
+            "ATTACKED YOU",
+            "VPN"
+        };
+
+        public static string[] originalTagStrings =
         {
             "INTERIOR",
             "LIKELY MODDER",

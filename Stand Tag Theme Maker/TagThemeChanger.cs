@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blink_UI_lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Stand_Tag_Theme_Maker
 {
-    public partial class TagThemeChanger : UserControl
+    public partial class TagThemeChanger : BlinkRoundedControl
     {
         public TagThemeChanger()
         {

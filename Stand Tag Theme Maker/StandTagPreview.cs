@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blink_UI_lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +12,13 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Stand_Tag_Theme_Maker
 {
-    public partial class StandTagPreview : UserControl
+    public partial class StandTagPreview : BlinkRoundedControl
     {
         public StandTagPreview()
         {
             InitializeComponent();
+
+            
         }
 
         public int TagStringIndex = -1;
@@ -47,6 +50,16 @@ namespace Stand_Tag_Theme_Maker
 
             Form1.tagStrings[TagStringIndex] = newText;
             Form1.StaticOnThemeChanged();
+        }
+
+        private void StandTagPreview_Load(object sender, EventArgs e)
+        {
+            label2.Text = Form1.originalTagStrings[TagStringIndex];
+        }
+
+        private void StandTagPreview_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
